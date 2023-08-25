@@ -91,12 +91,12 @@ public class Company {
 		System.out.println("name \tdepartment \tsalary \ttax \textra pay");
 		System.out.println("--------------------------------------------------");
 		for (Employee ep: emp) {
-//			if(ep instanceof Sales) {
-//				((Sales) ep).incentive(100);
-//			} else {
-//				((Secretary) ep).incentive(100);
-//			}
-			((Bonus) ep).incentive(100);
+			if(ep instanceof Sales) {
+				((Sales) ep).incentive(100);
+			} else {
+				((Secretary) ep).incentive(100);
+			}
+//			((Bonus) ep).incentive(100);
 		}
 
 		printEmployee(emp, true);
